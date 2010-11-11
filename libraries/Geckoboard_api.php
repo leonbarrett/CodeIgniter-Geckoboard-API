@@ -34,13 +34,14 @@ class Geckoboard_API {
   
   function return_geckoboard_stat($data){
   	
-  	
+  	end($data);
+  	$data_length = key($data);
   	$xml = '<?xml version="1.0" encoding="UTF-8"?>';
 	$xml .= '<root>';
 	
-	foreach($data as $stat):
-	$xml .=	'<item><value>'.$stat['value'].'</value><text>'.$stat['label'].'</text></item>';
-	endforeach;
+	for($i = 0; $i <= $data_length; $i++){
+		$xml .=	'<item><value>'.$data[$i]['value'].'</value><text>'.$data[$i]['label'].'</text></item>';
+	}
 
 	$xml .= '</root>';
 	

@@ -55,8 +55,8 @@ class Geckoboard_API {
 	$xml .= '<root>';
 	
 	$xml .= '<item>'.$data['value'].'</item>';
-	$xml .=	'<min><value>'.$data['min']['value'].'</value><text>'.$stat['min']['label'].'</text></min>';
-	$xml .=	'<max><value>'.$data['max']['value'].'</value><text>'.$stat['max']['label'].'</text></max>';
+	$xml .=	'<min><value>'.$data['min']['value'].'</value><text>'.$data['min']['label'].'</text></min>';
+	$xml .=	'<max><value>'.$data['max']['value'].'</value><text>'.$data['max']['label'].'</text></max>';
 
 	$xml .= '</root>';
 	

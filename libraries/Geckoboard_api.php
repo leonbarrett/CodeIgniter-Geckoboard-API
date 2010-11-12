@@ -11,14 +11,14 @@ class Geckoboard_API {
   
   }
   
-  function return_geckboard_data($data){
+  function return_geckboard_data($data = array()){
   	
   	$response = json_encode($data);
     return $response;
   
   }
   
-  function return_geckoboard_pie($data){
+  function return_geckoboard_pie($data = array()){
   	
     $xml = '<?xml version="1.0" encoding="UTF-8"?>';
 	$xml .= '<root>';
@@ -32,7 +32,7 @@ class Geckoboard_API {
   	return $xml;
   }
   
-  function return_geckoboard_stat($data){
+  function return_geckoboard_stat($data = array()){
   	
   	end($data);
   	$data_length = key($data);
@@ -49,7 +49,7 @@ class Geckoboard_API {
   	
   }
   
-  function return_geckoboard_meter($data){
+  function return_geckoboard_meter($data = array()){
 
   	$xml = '<?xml version="1.0" encoding="UTF-8"?>';
 	$xml .= '<root>';
@@ -64,7 +64,7 @@ class Geckoboard_API {
   	
   }
   
-  function return_geckoboard_text($data){
+  function return_geckoboard_text($data = array()){
   	
   	
   	$xml = '<?xml version="1.0" encoding="UTF-8"?>';
@@ -80,7 +80,7 @@ class Geckoboard_API {
   	
   }
   
-  function return_geckoboard_graph($data){
+  function return_geckoboard_graph($data = array()){
   
   	$xml = '<?xml version="1.0" encoding="UTF-8"?>';
 	$xml .= '<root>';

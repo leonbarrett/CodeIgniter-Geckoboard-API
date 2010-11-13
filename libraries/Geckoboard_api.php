@@ -40,7 +40,11 @@ class Geckoboard_API {
 	$xml .= '<root>';
 	
 	for($i = 0; $i <= $data_length; $i++){
-		$xml .=	'<item><value>'.$data[$i]['value'].'</value><text>'.$data[$i]['label'].'</text></item>';
+		if(empty($data[$i])){
+			$xml .= "<item><value></value><text></text></item>";
+		} else {
+			$xml .=	'<item><value>'.$data[$i]['value'].'</value><text>'.$data[$i]['label'].'</text></item>';
+		}
 	}
 
 	$xml .= '</root>';
@@ -71,7 +75,7 @@ class Geckoboard_API {
 	$xml .= '<root>';
 	
 	foreach($data as $stat):
-	$xml .=	'<item><type>'.$stat['type'].'</type><text><![CDATA["'.$stat['label'].'"]]></text></item>';
+	$xml .=	'<item><type>'.$stat['type'].'</type><text><![CDATA['.$stat['label'].']]></text></item>';
 	endforeach;
 
 	$xml .= '</root>';

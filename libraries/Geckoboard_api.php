@@ -71,7 +71,7 @@ class Geckoboard_API {
 	$xml .= '<root>';
 	
 	foreach($data as $stat):
-	$xml .=	'<item><type>'.$stat['type'].'</type><text><![CDATA['.$stat['label'].']]></text></item>';
+	$xml .=	'<item><type>'.$stat['type'].'</type><text><![CDATA["'.$stat['label'].'"]]></text></item>';
 	endforeach;
 
 	$xml .= '</root>';
